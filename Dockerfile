@@ -2,6 +2,7 @@ FROM python:3.11
 
 RUN pip install poetry
 
+
 ENV POETRY_NO_INTERACTION=1 \
     POETRY_VIRTUALENVS_IN_PROJECT=1 \
     POETRY_VIRTUALENVS_CREATE=1 \
@@ -21,4 +22,5 @@ WORKDIR /caire-app/src
 
 EXPOSE 5000
 
-CMD ["poetry", "run", "python", "test.py"]
+CMD ["poetry", "run", "uvicorn", "test:app", "--host",  "0.0.0.0", "--port", "5000"]
+
