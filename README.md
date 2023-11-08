@@ -1,5 +1,4 @@
-# cAIre
-
+# ColAI Care
 
 Long-term care decisions are often triggered by a sudden event. Overnight the carer needs to know relatively quick what care home facility may provide the best possible care. Retrieving information about essential elements like the quality of care or the management may be tricky.
 
