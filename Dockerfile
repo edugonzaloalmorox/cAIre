@@ -1,4 +1,6 @@
-FROM python:3.11
+FROM python:3.11-slim
+
+RUN apt-get update && apt-get install -y --no-install-recommends cuda-drivers cuda-nvcc cuda-runtime-dev
 
 RUN pip install poetry
 
@@ -23,4 +25,5 @@ WORKDIR /caire-app/src
 EXPOSE 5000
 
 CMD ["poetry", "run", "uvicorn", "test:app", "--host",  "0.0.0.0", "--port", "5000"]
+
 
